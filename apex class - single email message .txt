@@ -1,0 +1,13 @@
+public class emaila {
+    public pageReference show()
+    {
+        messaging.SingleEmailMessage msg = new messaging.SingleEmailMessage();
+        string[] toaddress = new string[]{'Kula@gmail.com','dhruv@gmail.com','umang@gmail.com'};
+            msg.setToAddresses(toaddress);
+        msg.setsubject(' Test');
+        msg.setHtmlBody('<h2> Whenever you get this email, send me a screenshot on our WhatsApp group. </h2>');
+        messaging.sendEmail(new messaging.SingleEmailMessage[]{msg});
+        return null;
+    } 
+
+}
